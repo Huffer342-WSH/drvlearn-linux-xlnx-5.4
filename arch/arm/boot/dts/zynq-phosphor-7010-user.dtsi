@@ -1,0 +1,36 @@
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/media/xilinx-vip.h>
+#include <dt-bindings/phy/phy.h>
+
+/ {
+	model = "Alientek Phosphor Zynq Development Board";
+	compatible = "xlnx,zynq-zc702", "xlnx,zynq-7000";
+
+	//此处添加chosen节点方便用于直接拷贝system-user.dtsi用于petalinux工程
+	chosen {
+		bootargs = "console=ttyPS0,115200 cma=50M earlycon root=/dev/mmcblk0p2 rw rootwait";
+		stdout-path = "serial0:115200n8";
+	};
+};
+
+&uart0 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+};
+
+&sdhci0 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+};
+
+
+&gem0 {
+	local-mac-address = [00 0a 35 00 8b 87];
+
+	phy-handle = <&ethernet_phy>;
+	ethernet_phy: ethernet-phy@7 {	/* yt8521 */
+		reg = <0x7>;
+		device_type = "ethernet-phy";
+	};
+};

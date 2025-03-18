@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"arch/[^a]*":true,
+			"arch/arm64":true,
+			"arch/alpha":true,
+			"arch/arc":true,
+			"arch/arm/boot/dts/[^zM]*":true,
+			"arch/arm/boot/dts/zynq-[!p]*":true
+		}
+	
+	}
+}
