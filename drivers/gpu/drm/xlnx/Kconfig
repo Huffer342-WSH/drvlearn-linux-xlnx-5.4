@@ -113,3 +113,12 @@ config DRM_XLNX_BRIDGE_VTC
 	  Currently the support is added to the Xilinx Video Mixer and
 	  Xilinx PL display CRTC drivers. This driver provides ability
 	  to generate timings through the bridge layer.
+
+
+##########################################################################
+
+config DRM_XLNX_ATK_LCD
+	tristate "Alientek LCD DRM TX Driver"
+	depends on DRM_XLNX
+	help
+	  LCD DRM slave encoder for Video-out on Alientek boards.

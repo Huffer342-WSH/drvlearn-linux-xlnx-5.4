@@ -149,3 +149,6 @@ x509.genkey
 
 # VSCode file
 !.vscode
+
+# petalinux file
+singletask.lock

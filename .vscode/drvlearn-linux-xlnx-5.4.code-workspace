@@ -11,8 +11,9 @@
 			"arch/alpha":true,
 			"arch/arc":true,
 			"arch/arm/boot/dts/[^zM]*":true,
-			"arch/arm/boot/dts/zynq-[!p]*":true
-		}
+			"arch/arm/boot/dts/zynq-[!p7]*": true,
+		},
+		"editor.formatOnPaste": false
 	
 	}
 }

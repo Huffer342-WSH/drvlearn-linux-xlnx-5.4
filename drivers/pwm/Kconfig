@@ -150,6 +150,19 @@ config PWM_CROS_EC
 	  PWM driver for exposing a PWM attached to the ChromeOS Embedded
 	  Controller.
 
+
+###############################################################################
+# 适用于ZYNQ PL端的AXI-PWM IP核 
+config PWM_DGLNT
+	tristate "Digilent AXI PWM driver support"
+	depends on ARCH_ZYNQ || ARCH_ZYNQMP
+	help
+	  Simple Driver for Digilent AXI_PWM IP Core.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called pwm-dglnt.c
+###############################################################################
+
 config PWM_EP93XX
 	tristate "Cirrus Logic EP93xx PWM support"
 	depends on ARCH_EP93XX
