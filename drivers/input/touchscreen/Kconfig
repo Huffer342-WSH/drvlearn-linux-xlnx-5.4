@@ -363,6 +363,12 @@ config TOUCHSCREEN_EXC3000
 	  To compile this driver as a module, choose M here: the
 	  module will be called exc3000.
 
+config TOUCHSCREEN_FT5426
+	tristate "FT5426 multi-touch panel support"
+	depends on I2C
+	help
+	  FT5426 driver
+
 config TOUCHSCREEN_FUJITSU
 	tristate "Fujitsu serial touchscreen"
 	select SERIO
